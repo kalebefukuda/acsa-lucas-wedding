@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${kodchasan.variable} antialiased`}
+        className={`${kodchasan.variable} antialiased bg-[#f5f4e6]`}
       >
         {children}
       </body>
