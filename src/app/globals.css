@@ -39,3 +39,8 @@ body {
 .animate-scroll {
   animation: scroll 30s linear infinite;
 }
+
+.text-outline {
+  -webkit-text-stroke: 1px black;
+  color: var(--color-primary);
+}
