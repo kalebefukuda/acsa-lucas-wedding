@@ -8,23 +8,23 @@ export default function SaveTheDate() {
   ];
 
   return (
-    <section className="bg-[#f5f4e6] py-16 px-6 flex flex-col md:flex-row items-center justify-center gap-[12rem]">
-      {/* Lado esquerdo - título */}
-      <div className="text-[116px] text-black font-castoro text-center md:text-left leading-tight">
+    <section className="w-full bg-[#f5f4e6] py-32 px-6 flex flex-col lg:flex-row items-center justify-center gap-[6rem]">
+      {/* Title */}
+      <div className="text-[100px] md:text-[126px] lg:mb-12 md:mb-0 text-black font-castoro  lg:text-left leading-tight">
         <p>SAVE</p>
         <p>THE</p>
-        <p>DATE<span className="text-[var(--color-primary)]">!</span></p>
+        <p>DATE<span className="text-[var(--color-primary)] text-outline">!</span></p>
       </div>
 
-      {/* Linha do tempo */}
-      <div className="flex gap-8">
+      {/* Events */}
+      <div className="flex flex-col lg:flex-row gap-12 md:gap-20 ml-0 md:ml-10">
         {events.map((event, idx) => (
           <div
             key={idx}
             className="flex flex-col items-center text-center w-[200px]"
           >
-            <div className="w-40 h-110 bg-black rounded-full"></div>
-            <div className="w-px h-20 bg-black mt-1"></div>
+            <div className="w-35 h-65 md:w-55 md:h-140 bg-black lg:rounded-full md:rounded-full rounded-[60px]"></div>
+            <div className="w-[2px] h-8 md:h-25 bg-black mt-1"></div>
             <p className="text-sm mt-2 text-black">{event.date}</p>
             <p className="text-2xl font-castoro mt-3 text-black uppercase break-words">
               {event.label}
