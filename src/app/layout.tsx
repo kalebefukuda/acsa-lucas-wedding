@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {Kodchasan, Castoro } from "next/font/google";
+import { Kodchasan, Castoro } from "next/font/google";
 import "./globals.css";
 
 
@@ -26,9 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body
-        className={`${kodchasan.variable} antialiased bg-[#f5f4e6]`}
+        className={`${kodchasan.variable} ${castoro.variable} antialiased`}
       >
         {children}
       </body>
