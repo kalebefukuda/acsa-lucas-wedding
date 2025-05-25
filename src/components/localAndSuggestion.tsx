@@ -2,31 +2,63 @@
 import Image from "next/image";
 
 export default function LocationAndSuggestions() {
+  const mapsUrl =
+    "https://www.google.com/maps/search/?api=1&query=Rua+Espanha,+67,+Blumenau+-+SC";
+
   return (
     <section className="min-h-screen bg-[#f5f4e6] grid grid-cols-1 lg:grid-cols-[40%_60%] border-t-2  border-black">
       {/* Localização */}
       <div className="relative w-full border-r-2 border-black flex flex-col justify-between">
         <div>
-          <div className="bg-[var(--color-primary)] py-10 px-6 text-black  font-castoro text-3xl font-bold border-b border-black w-full flex justify-center">
-            LOCALIZAÇÃO
+          <div className="bg-[var(--color-primary)] py-10 px-6 text-black  font-castoro text-3xl font-bold border-b border-black w-full">
+            <div className="w-full h-full flex items-center justify-center">
+              LOCALIZAÇÃO
+            </div>
           </div>
 
-          <ul className="mt-10 text-lg leading-relaxed font-kodchasan list-disc list-inside">
-            <li>29 de junho de 2024</li>
-            <li>A realizar-se às 15h</li>
-            <li>Cerimônia e recepção - Ville La Rochelle</li>
-            <li>Estrada Municipal do bairro Caioçara 1100</li>
-            <li>Bairro Caioçara | Jarinu - SP</li>
-          </ul>
+          <h2
+            className="mt-20 ml-15 text-[65px] italic font-castoro text-[var(--color-primary)]"
+            style={{ WebkitTextStroke: "1px black" }}
+          >
+            Castelo Suíço
+          </h2>
+
+          <div className="mt-6 ml-18 text-[26px] font-kodchasan text-black leading-relaxed">
+            <p>07 de fevereiro de 2026</p>
+            <p>
+              A realizar-se às 17h{" "}
+              <span
+                className="text-[var(--color-primary)] text-[26px] font-bold"
+                style={{ WebkitTextStroke: "0.5px black" }}
+              >
+                !
+              </span>
+            </p>
+            <p>Rua Espanha, 67</p>
+            <p>Blumenau - SC</p>
+          </div>
+
+          <div className="border-t-2 border-black w-[25%] my-8"></div>
+
+          <div className="mt-15 ml-14">
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[320px] h-[70px] px-8 py-3 bg-[var(--color-primary)] text-black border border-black rounded-[18px] font-kodchasan text-base flex items-center justify-center gap-2 hover:scale-[1.02] transition cursor-pointer"
+            >
+              Abrir no maps <span>→</span>
+            </a>
+          </div>
         </div>
 
-        <div className="mt-10 w-32 h-auto self-end">
+        <div className="relative h-auto">
           <Image
             src="/images/castelo.svg"
             alt="Ilustração Torre"
-            width={300}
-            height={300}
-            className="w-full h-auto"
+            width={350}
+            height={350}
+            className="absolute bottom-[-2px] right-[-70px] object-fill"
           />
         </div>
       </div>
@@ -63,7 +95,9 @@ export default function LocationAndSuggestions() {
             </div>
           ))}
         </div>
-        <div className="text-xl text-right font-castoro text-black mr-3">Salão</div>
+        <div className="text-xl text-right font-castoro text-black mr-3">
+          Salão
+        </div>
       </div>
     </section>
   );
