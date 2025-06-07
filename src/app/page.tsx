@@ -1,3 +1,4 @@
+import Gift from "@/components/gift";
 import  Hero  from "@/components/hero";
 import LocationAndSuggestions from "@/components/localAndSuggestion";
 import SaveTheDate from "@/components/saveTheDate";
@@ -14,6 +15,8 @@ export default function Home() {
       <StoryAndPhotos />
       <LocationAndSuggestions />
       <ScrollingBanner />
+      <Gift />
+
     </>
   );
 }
