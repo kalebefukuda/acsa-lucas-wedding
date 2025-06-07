@@ -31,7 +31,7 @@ export async function POST(req: Request) {
 
         const data = await response.json();
         return NextResponse.json({ url: data.init_point });
-    } catch (error) {
+    } catch {
         return NextResponse.json({ error: "Erro ao criar preferência" }, { status: 500 });
     }
 }
