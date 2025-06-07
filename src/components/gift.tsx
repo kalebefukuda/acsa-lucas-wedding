@@ -91,7 +91,7 @@ export default function Gift() {
             .map((gift) => (
               <div
                 key={gift.id}
-                className="rounded-xl bg-[#f5f4e6] overflow-hidden cursor-pointer"
+                className="rounded-xl bg-[#f5f4e6] overflow-hidden"
                 style={{
                   boxShadow: "0px 4px 20px -2px rgba(0, 0, 0, 0.38)",
                 }}
@@ -116,12 +116,29 @@ export default function Gift() {
                     R$ {gift.price.toFixed(2)}
                   </p>
 
-                  {!gift.isAvailable && (
+                  {/* Botão Mercado Pago */}
+                  {gift.isAvailable && (
                     <button
-                      disabled
-                      className="mt-2 lg:mt-3 px-3 lg:px-4 py-1 lg:py-2 rounded-full border border-gray-400 text-gray-500 italic text-xs lg:text-sm cursor-default"
+                      onClick={async () => {
+                        const res = await fetch("/api/create-preference", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({
+                            title: gift.name,
+                            price: gift.price,
+                          }),
+                        });
+
+                        const data = await res.json();
+                        if (data?.url) {
+                          window.location.href = data.url;
+                        } else {
+                          alert("Erro ao redirecionar para o pagamento.");
+                        }
+                      }}
+                      className="mt-5 px-4 py-1.5 bg-[var(--color-primary)] text-black border border-black rounded-lg font-kodchasan text-sm hover:scale-[1.02] transition cursor-pointer"
                     >
-                      Comprado
+                      Presentear
                     </button>
                   )}
                 </div>
