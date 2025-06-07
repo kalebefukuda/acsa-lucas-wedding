@@ -80,8 +80,8 @@ export default function LocationAndSuggestions() {
               key={col}
               className="flex flex-col gap-8 border border-black rounded-xl py-6 w-[400px]"
             >
-              {[1, 2, 3].map((item) => (
-                <div className="flex items-center gap-6 justify-center mr-5">
+              {[1, 2, 3].map((_,index) => (
+                <div key={index} className="flex items-center gap-6 justify-center mr-5">
                   <div className="w-26 h-28 bg-black rounded-md"></div>
                   <div className="flex flex-col justify-center text-sm text-black mr-10">
                     <span className="text-start">Pousada São José</span>

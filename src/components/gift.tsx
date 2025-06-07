@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { gifts } from "@/lib/gifts";
 import { Menu, X } from "lucide-react";
 
