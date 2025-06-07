@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${kodchasan.variable} ${castoro.variable} antialiased`}
+        className={`${kodchasan.variable} ${castoro.variable} antialiased overflow-x-hidden`}
       >
         {children}
       </body>
