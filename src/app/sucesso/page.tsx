@@ -1,23 +1,27 @@
-"use client"
-import { useSearchParams } from "next/navigation"
-import { useEffect, useState } from "react"
+'use client';
+
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+
+function SucessoContent() {
+  const searchParams = useSearchParams();
+  const status = searchParams.get("status");
+
+  return (
+    <div className="p-10 text-center">
+      <h1 className="text-4xl font-bold">
+        {status === "approved" ? "Compra aprovada 🎉" : "Compra pendente 🤔"}
+      </h1>
+    </div>
+  );
+}
 
 export default function SucessoPage() {
-  const searchParams = useSearchParams()
-  const transactionId = searchParams.get("transaction_id")
-  const [isValid, setIsValid] = useState(false)
-
-  useEffect(() => {
-    async function validatePayment() {
-      const res = await fetch(`/api/validate?transaction_id=${transactionId}`)
-      const data = await res.json()
-      setIsValid(data.valid)
-    }
-
-    if (transactionId) validatePayment()
-  }, [transactionId])
-
-  if (!isValid) return <p>Validando pagamento...</p>
-
-  return <h1>Obrigado pelo presente! ❤️</h1>
+  return (
+    <Suspense fallback={<div className="p-10 text-center">Carregando...</div>}>
+      <SucessoContent />
+    </Suspense>
+  );
 }
+
+export const dynamic = "force-dynamic";
