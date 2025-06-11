@@ -17,7 +17,7 @@ export default function Gift() {
       {/* Título e categorias */}
       <div className="flex lg:flex-row justify-between items-center mb-10 px-6 lg:px-25">
         <h2
-          className="text-[38px] lg:text-6xl font-castoro text-black"
+          className="text-[35px] lg:text-6xl font-castoro text-black"
           style={{ WebkitTextStroke: "1px black" }}
         >
           PRESENTES<span className="text-[var(--color-primary)]">!</span>
@@ -45,7 +45,7 @@ export default function Gift() {
         <div className="lg:hidden relative">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="flex items-center gap-2 px-5 py-2 text-black bg-[var(--color-primary)] rounded-lg font-kodchasan text-lg cursor-pointer text-center"
+            className="flex items-center ml-5 gap-2 p-2 text-black bg-[var(--color-primary)] rounded-lg font-kodchasan text-[16px] lg:text-lg cursor-pointer text-center"
           >
             {isMenuOpen ? <X size={30} /> : <Menu size={20} />}
             {selectedCategory}
