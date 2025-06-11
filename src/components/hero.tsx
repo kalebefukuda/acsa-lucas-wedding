@@ -62,7 +62,7 @@ export default function Hero() {
             >
               {open ? <X size={24} /> : <Menu size={24} />}
             </button>
-            <div className="flex items-center mr-8">
+            <div className="flex items-center mr-3">
               <Image
                 src="/images/LA_BRASÃO 03.png"
                 width={40}
@@ -135,7 +135,7 @@ export default function Hero() {
         </div>
 
         {/* Contagem regressiva */}
-        <div className="grid grid-cols-4 sm:grid-cols-4 gap-8 text-center font-castoro mb-12">
+        <div className="grid grid-cols-4 sm:grid-cols-4 gap-4 lg:gap-10 text-center font-castoro mb-12">
           {[
             { label: "MESES", value: timeLeft.months },
             { label: "DIA", value: timeLeft.days },
@@ -144,7 +144,7 @@ export default function Hero() {
           ].map((item, idx) => (
             <div key={idx}>
               <div
-                className="text-[75px] lg:text-[80px] text-[#FEE987]"
+                className="text-[60px] lg:text-[80px] text-[#FEE987]"
                 style={{ WebkitTextStroke: "1px black" }}
               >
                 {String(item.value).padStart(2, "0")}

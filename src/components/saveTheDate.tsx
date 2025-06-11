@@ -10,7 +10,7 @@ export default function SaveTheDate() {
   return (
     <section className="w-full bg-[#f5f4e6] py-32 px-6 flex flex-col lg:flex-row items-center justify-center gap-[6rem]">
       {/* Title */}
-      <div className="text-[100px] md:text-[126px] lg:mb-12 md:mb-0 text-black font-castoro  lg:text-left leading-tight">
+      <div className="text-[90px] md:text-[126px] lg:mb-12 md:mb-0 text-black font-castoro  lg:text-left leading-tight">
         <p>SAVE</p>
         <p>THE</p>
         <p>DATE<span className="text-[var(--color-primary)] text-outline">!</span></p>
