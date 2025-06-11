@@ -83,22 +83,22 @@ export default function LocationAndSuggestions() {
 
           <div className="border-t-2 border-black w-[25%] my-8 ml-7 lg:ml-14"></div>
 
-          <div className="flex  gap-6 items-start lg:justify-start lg:ml-14 mx-6 px-6">
+          <div className="flex lg:flex items-start lg:justify-start lg:ml-14 ml-6 pl-6">
             <a
               href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[180px] lg:w-[320px] h-[55px] lg:h-[70px] px-4 lg:px-8 py-3 bg-[var(--color-primary)] text-black border border-black rounded-[18px] font-kodchasan text-base flex items-center justify-center gap-2 hover:scale-[1.02] transition cursor-pointer"
+              className="text-[14px] lg:text-[17px] w-[340px] lg:w-[320px] h-[55px] lg:h-[70px] px-4 lg:px-8 py-3 bg-[var(--color-primary)] text-black border border-black rounded-[18px] font-kodchasan text-base flex items-center justify-center gap-2 hover:scale-[1.02] transition cursor-pointer"
             >
               Abrir no maps <span>→</span>
             </a>
-            <div className="absolute lg:relative h-full lg:h-auto w-[350px]">
+            <div className="flex lg:relative h-full lg:h-auto w-[490px] lg:mb-10 items-end">
               <Image
                 src="/images/castelo.svg"
                 alt="Ilustração Torre"
                 width={350}
                 height={350}
-                className="absolute right-0 left-40 lg:left-[90px] w-[250px] lg:bottom-[-200] lg:w-[330px] object-fill lg:object-fill"
+                className="flex justify-end lg:relative lg:top-10 lg:left-[90px] w-[270px] lg:bottom-[-200] lg:w-[330px] object-fill lg:object-fill"
               />
             </div>
           </div>

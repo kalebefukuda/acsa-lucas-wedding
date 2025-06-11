@@ -93,7 +93,7 @@ export default function Gift() {
                 key={gift.id}
                 className="rounded-xl bg-[#f5f4e6] overflow-hidden"
                 style={{
-                  boxShadow: "0px 4px 20px -2px rgba(0, 0, 0, 0.38)",
+                  boxShadow: "0px 4px 20px -2px rgba(0, 0, 0, 0.30)",
                 }}
               >
                 {/* Imagem */}
