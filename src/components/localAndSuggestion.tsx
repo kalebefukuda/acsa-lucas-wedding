@@ -5,41 +5,41 @@ const suggestions = {
   hospedagem: [
     {
       name: "Hotel Glória",
-      distancia: "5km",
-      mapsUrl: "https://g.co/kgs/tKJX6Zs",
+      distancia: "3.3km",
+      mapsUrl: "https://maps.app.goo.gl/77Ka8RBNAkfUVgnf6",
       image: "/sugestoes/hotel-gloria.webp",
     },
     {
       name: "Hotel Himmemblau",
-      distancia: "6km",
-      mapsUrl: "https://g.co/kgs/KmFXRgm",
+      distancia: "3km",
+      mapsUrl: "https://maps.app.goo.gl/ry6nG1V56m656h5j8",
       image: "/sugestoes/hotel-himmelblau.jpg",
     },
     {
       name: "Hotel Budget Ibis",
-      distancia: "6km",
-      mapsUrl: "https://g.co/kgs/aUWCTzA",
+      distancia: "3.2km",
+      mapsUrl: "https://maps.app.goo.gl/9W7uaqMaYDMLjC7L8",
       image: "/sugestoes/hotel-ibis.jpg",
     },
   ],
   salao: [
     {
       name: "Espaço Margarete",
-      distancia: "1km",
-      mapsUrl: "https://g.co/kgs/N9pyB5K",
+      distancia: "2.9km",
+      mapsUrl: "https://maps.app.goo.gl/BPqm1ojrqm1C5faQA",
       image: "/sugestoes/espaco-margarete.webp",
     },
     {
       name: "Point da Beleza",
-      distancia: "1km",
-      mapsUrl: "https://maps.app.goo.gl/2yn8D2gXuSHDHpd36",
+      distancia: "4.6km",
+      mapsUrl: "https://maps.app.goo.gl/FuWm8f7tGyvN6ckj9",
       image: "/sugestoes/point-beleza.jpeg",
     },
     {
-      name: "Point da Beleza",
-      distancia: "2km",
-      mapsUrl: "https://maps.app.goo.gl/2yn8D2gXuSHDHpd36",
-      image: "/sugestoes/point-beleza.jpeg",
+      name: "Fizz Cabellos",
+      distancia: "1.4km",
+      mapsUrl: "https://maps.app.goo.gl/yioKaDLckspFwULw7",
+      image: "/sugestoes/fiz-cabelos.webp",
     },
   ],
 };
@@ -98,7 +98,7 @@ export default function LocationAndSuggestions() {
                 alt="Ilustração Torre"
                 width={350}
                 height={350}
-                className="flex justify-end lg:relative lg:top-10 lg:left-[90px] w-[270px] lg:bottom-[-200] lg:w-[330px] object-fill lg:object-fill"
+                className="flex justify-end lg:relative lg:top-10 lg:left-[90px] w-[270px] lg:bottom-[-200] lg:w-[330px] object-fill"
               />
             </div>
           </div>
@@ -129,8 +129,8 @@ export default function LocationAndSuggestions() {
                   <Image
                     src={item.image}
                     alt={item.name}
-                    width={90}
-                    height={90}
+                    width={100}
+                    height={100}
                     className="w-25 h-25 bg-black rounded-md object-cover"
                   />
                   <div className="flex flex-col text-sm text-black">
