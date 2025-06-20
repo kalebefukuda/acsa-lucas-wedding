@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Gift from "@/components/gift";
 import  Hero  from "@/components/hero";
 import LocationAndSuggestions from "@/components/localAndSuggestion";
@@ -16,7 +17,7 @@ export default function Home() {
       <LocationAndSuggestions />
       <ScrollingBanner />
       <Gift />
-
+      <Footer />
     </>
   );
 }
