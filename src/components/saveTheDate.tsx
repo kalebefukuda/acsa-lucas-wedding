@@ -2,13 +2,13 @@
 
 export default function SaveTheDate() {
   const events = [
-    { label: "O COMEÇO!", date: "10 April 2018" },
-    { label: "O PEDIDO!", date: "10 April 2018" },
-    { label: "O CASAMENTO!", date: "10 April 2026" },
+    { label: "O COMEÇO!", date: "01 Novembro 2024" },
+    { label: "O PEDIDO!", date: "01 Março 2025" },
+    { label: "O CASAMENTO!", date: "07 Fevereiro 2026" },
   ];
 
   return (
-    <section className="w-full bg-[#f5f4e6] py-32 px-6 flex flex-col lg:flex-row items-center justify-center gap-[6rem]">
+    <section className="w-full bg-white py-32 px-6 flex flex-col lg:flex-row items-center justify-center gap-[6rem]">
       {/* Title */}
       <div className="text-[90px] md:text-[126px] lg:mb-12 md:mb-0 text-black font-castoro  lg:text-left leading-tight">
         <p>SAVE</p>

@@ -51,7 +51,7 @@ export default function Hero() {
   return (
     <>
 
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#f5f4e6] border-b border-black/10 text-black">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black/10 text-black">
         {/* Menu Mobile */}
         <div className="lg:hidden">
           <div className="flex items-center justify-between p-4">
@@ -78,7 +78,7 @@ export default function Hero() {
               open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
-            <div className="bg-[#f5f4e6] border-t border-black/10">
+            <div className="bg-white border-t border-black/10">
               {navItems.map(({ label, href }) => (
                 <a
                   key={href}
@@ -113,7 +113,7 @@ export default function Hero() {
       </header>
 
       {/* Hero Section */}
-      <section className="font-kodchasan font-medium min-h-screen flex flex-col items-center justify-between bg-[#f5f4e6] text-black">
+      <section className="font-kodchasan font-medium min-h-screen flex flex-col items-center justify-between bg-white text-black">
         {/* Monograma */}
         <div className="flex items-center justify-center flex-1">
           <Image

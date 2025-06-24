@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function StoryAndPhotos() {
   return (
-    <section className="min-h-screen bg-[#f5f4e6] flex flex-col lg:flex-row items-stretch justify-center mx-6 lg:mx-10">
+    <section className="min-h-screen bg-white flex flex-col lg:flex-row items-stretch justify-center mx-6 lg:mx-10">
       {/* Texto - esquerda */}
       <div
         className="flex flex-col w-full lg:w-1/2 text-black font-castoro justify-center items-start px-6 lg:px-20 border-b lg:border-b-0 lg:border-r border-black py-15"

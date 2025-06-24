@@ -11,7 +11,7 @@ export default function Gift() {
 
   return (
     <section
-      className="min-h-screen bg-[#f5f4e6] px-6 md:px-10 py-16"
+      className="min-h-screen bg-white px-6 md:px-10 py-16"
       id="presentes"
     >
       {/* Título e categorias */}
@@ -91,7 +91,7 @@ export default function Gift() {
             .map((gift) => (
               <div
                 key={gift.id}
-                className="rounded-xl bg-[#f5f4e6] overflow-hidden"
+                className="rounded-xl bg-white overflow-hidden"
                 style={{
                   boxShadow: "0px 4px 20px -2px rgba(0, 0, 0, 0.30)",
                 }}

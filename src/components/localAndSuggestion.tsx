@@ -49,7 +49,7 @@ export default function LocationAndSuggestions() {
     "https://www.google.com/maps/search/?api=1&query=Rua+Espanha,+67,+Blumenau+-+SC";
 
   return (
-    <section className="min-h-screen bg-[#f5f4e6] flex flex-col lg:grid lg:grid-cols-[40%_60%] border-t-2 border-black">
+    <section className="min-h-screen bg-white flex flex-col lg:grid lg:grid-cols-[40%_60%] border-t-2 border-black">
       {/* Localização */}
       <div className="relative w-full lg:border-r-2 border-black flex flex-col justify-between min-h-[65vh] lg:min-h-0">
         <div>
