@@ -113,7 +113,7 @@ export default function Hero() {
       </header>
 
       {/* Hero Section */}
-      <section className="font-kodchasan font-medium min-h-screen flex flex-col items-center justify-between bg-white text-black">
+      <section id="inicio" className="font-kodchasan font-medium min-h-screen flex flex-col items-center justify-between bg-white text-black">
         {/* Monograma */}
         <div className="flex items-center justify-center flex-1">
           <Image

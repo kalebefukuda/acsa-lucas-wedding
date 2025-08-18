@@ -51,7 +51,7 @@ export default function LocationAndSuggestions() {
   return (
     <section className="min-h-screen bg-white flex flex-col lg:grid lg:grid-cols-[40%_60%] border-t-2 border-black">
       {/* Localização */}
-      <div className="relative w-full lg:border-r-2 border-black flex flex-col justify-between min-h-[65vh] lg:min-h-0">
+      <div id="local" className="relative w-full lg:border-r-2 border-black flex flex-col justify-between min-h-[65vh] lg:min-h-0">
         <div>
           <div className="bg-[var(--color-primary)] py-8 lg:py-10 px-4 lg:px-6 text-black font-castoro text-2xl lg:text-3xl font-bold border-b border-black w-full">
             <div className="w-full h-full flex items-center justify-center">
@@ -106,7 +106,7 @@ export default function LocationAndSuggestions() {
       </div>
 
       {/* Sugestões */}
-      <div className="flex flex-col px-4 lg:px-25 py-7 gap-6 min-h-[100vh] lg:min-h-0 border-t-2 lg:border-t-0 border-black">
+      <div id="dicas" className="flex flex-col px-4 lg:px-25 py-7 gap-6 min-h-[100vh] lg:min-h-0 border-t-2 lg:border-t-0 border-black">
         <h2
           className="text-[55px] lg:text-[75px] italic font-castoro text-[var(--color-primary)] text-center lg:text-left "
           style={{ WebkitTextStroke: "1px black" }}
