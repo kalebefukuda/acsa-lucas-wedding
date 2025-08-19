@@ -45,41 +45,39 @@ export default function Gift() {
         <div className="lg:hidden relative">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="flex items-center ml-5 gap-2 p-2 text-black bg-[var(--color-primary)] rounded-lg font-kodchasan text-[16px] lg:text-lg cursor-pointer text-center"
+            className="flex items-center ml-5 mb-2 gap-2 p-2 text-black bg-[var(--color-primary)] rounded-lg font-kodchasan text-[16px] lg:text-lg cursor-pointer text-center"
           >
-            {isMenuOpen ? <X size={30} /> : <Menu size={20} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             {selectedCategory}
           </button>
 
           {/* Menu dropdown */}
-          {isMenuOpen && (
-            <div
-              className={`absolute top-full left-0 right-0 mt-2 bg-[var(--background)] text-black rounded-lg shadow-lg z-10 transform transition-all duration-300 origin-top ${
-                isMenuOpen
-                  ? "scale-y-100 opacity-100"
-                  : "scale-y-0 opacity-0 pointer-events-none"
-              }`}
-            >
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => {
-                    setSelectedCategory(cat);
-                    setIsMenuOpen(false);
-                  }}
-                  className={`w-full text-left px-4 py-3 font-kodchasan text-[16px] hover:bg-[#ffeea0] transition duration-150 cursor-pointer ${
-                    selectedCategory === cat ? "font-bold bg-[#ffeea0]" : ""
-                  } ${cat === categories[0] ? "rounded-t-lg" : ""} ${
-                    cat === categories[categories.length - 1]
-                      ? "rounded-b-lg"
-                      : ""
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          )}
+          <div
+            className={`absolute top-full left-0 right-0 mt-2 bg-[var(--background)] text-black rounded-lg shadow-lg z-10 transform transition-all duration-250 origin-top ${
+              isMenuOpen
+                ? "scale-y-100 opacity-100"
+                : "scale-y-0 opacity-0 pointer-events-none"
+            }`}
+          >
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setIsMenuOpen(false);
+                }}
+                className={`w-full text-left px-4 py-3 font-kodchasan text-[16px] hover:bg-[#ffeea0] transition duration-250 cursor-pointer ${
+                  selectedCategory === cat ? "font-bold bg-[#ffeea0]" : ""
+                } ${cat === categories[0] ? "rounded-t-lg" : ""} ${
+                  cat === categories[categories.length - 1]
+                    ? "rounded-b-lg"
+                    : ""
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -118,28 +116,30 @@ export default function Gift() {
 
                   {/* Botão Mercado Pago */}
                   {gift.isAvailable && (
-                    <button
-                      onClick={async () => {
-                        const res = await fetch("/api/create-preference", {
-                          method: "POST",
-                          headers: { "Content-Type": "application/json" },
-                          body: JSON.stringify({
-                            title: gift.name,
-                            price: gift.price,
-                          }),
-                        });
+                    <div className="mt-5 transition-transform duration-450 hover:scale-[2.0]">
+                      <button
+                        onClick={async () => {
+                          const res = await fetch("/api/create-preference", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                              title: gift.name,
+                              price: gift.price,
+                            }),
+                          });
 
-                        const data = await res.json();
-                        if (data?.url) {
-                          window.location.href = data.url;
-                        } else {
-                          alert("Erro ao redirecionar para o pagamento.");
-                        }
-                      }}
-                      className="mt-5 px-4 py-1.5 bg-[var(--color-primary)] text-black border border-black rounded-lg font-kodchasan text-sm hover:scale-[1.02] transition cursor-pointer"
-                    >
-                      Presentear
-                    </button>
+                          const data = await res.json();
+                          if (data?.url) {
+                            window.location.href = data.url;
+                          } else {
+                            alert("Erro ao redirecionar para o pagamento.");
+                          }
+                        }}
+                        className="px-4 py-1.5 bg-[var(--color-primary)] text-black border border-black rounded-lg font-kodchasan text-sm cursor-pointer"
+                      >
+                        Presentear
+                      </button>
+                    </div>
                   )}
                 </div>
               </div>
