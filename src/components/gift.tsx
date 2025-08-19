@@ -116,7 +116,7 @@ export default function Gift() {
 
                   {/* Botão Mercado Pago */}
                   {gift.isAvailable && (
-                    <div className="mt-5 transition-transform duration-450 hover:scale-[2.0]">
+                    <div className="mt-5 transition hover:scale-105">
                       <button
                         onClick={async () => {
                           const res = await fetch("/api/create-preference", {
