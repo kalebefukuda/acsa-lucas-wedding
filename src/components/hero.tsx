@@ -50,7 +50,6 @@ export default function Hero() {
 
   return (
     <>
-
       <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-black/10 text-black">
         {/* Menu Mobile */}
         <div className="lg:hidden">
@@ -113,29 +112,34 @@ export default function Hero() {
       </header>
 
       {/* Hero Section */}
-      <section id="inicio" className="font-kodchasan font-medium min-h-screen flex flex-col items-center justify-between bg-white text-black">
-        {/* Monograma */}
-        <div className="flex items-center justify-center flex-1">
-          <Image
-            src="/images/monograma-hero.svg"
-            width={900}
-            height={400}
-            alt="Monograma"
-            className="w-[400px] lg:w-full h-full"
-          />
-        </div>
+      <section
+        id="inicio"
+        className="font-kodchasan font-medium min-h-screen flex flex-col items-center justify-between bg-white text-black bg-[url(/images/Acsa&Lucas-125.jpg)]  bg-size-[1250px]  bg-[position:60%_center] md:bg-[position:70%_center]  md:bg-size-[2500px] bg-no-repeat"
+      >
+        <div
+          className="
+                order-1 lg:order-2 lg:mb-5 z-10 
+                absolute mt-[7.5rem] inset-x-0 top-0
+                md:static md:mt-0 md:block">
 
-        {/* Local e Data */}
-        <div className="mb-5">
-          <p className="text-lg text-center uppercase font-castoro tracking-wider">
+          <p className="text-base sm:text-base md:text-lg text-center uppercase font-castoro tracking-wider mt-15">
             07 DE FEVEREIRO DE 2026
             <br />
             Blumenau - SC
           </p>
         </div>
+        <div className="order-2 lg:order-1 flex items-center justify-center flex-1 z-10 mt-60">
+          <Image
+            src="/images/monograma-hero.svg"
+            width={900}
+            height={400}
+            alt="Monograma"
+            className="w-[300px] lg:w-[600px] h-full"
+          />
+        </div>
 
         {/* Contagem regressiva */}
-        <div className="grid grid-cols-4 sm:grid-cols-4 gap-4 lg:gap-10 text-center font-castoro mb-12">
+        <div className="order-3 grid grid-cols-4 sm:grid-cols-4 gap-4 lg:gap-10 text-center font-castoro mb-20">
           {[
             { label: "MESES", value: timeLeft.months },
             { label: "DIA", value: timeLeft.days },

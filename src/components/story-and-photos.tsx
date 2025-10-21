@@ -41,7 +41,7 @@ export default function StoryAndPhotos() {
       >
         <div className="max-w-[550px] w-full">
           <Image
-            src="/images/foto-section.svg"
+            src="/images/foto-section copy.svg"
             alt="Seção de fotos do casamento"
             width={600}
             height={400}
