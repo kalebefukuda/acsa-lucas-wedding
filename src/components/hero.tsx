@@ -108,7 +108,7 @@ export default function Hero() {
       {/* Hero Section */}
       <section
         id="inicio"
-        className="font-kodchasan font-medium min-h-screen flex flex-col items-center justify-between bg-white text-white relative"
+        className="overflow-hidden font-kodchasan font-medium min-h-screen flex flex-col items-center justify-between bg-white text-white relative"
       >
         <Image
           src="/images/Acsa&Lucas-125.jpg"
