@@ -5,7 +5,7 @@ export default function ScrollingBanner() {
   const items = Array.from({ length: 10 });
 
   return (
-    <div className="w-full h-[50px] lg:h-[65px] overflow-hidden bg-[var(--color-primary)] border-y border-black py-4">
+    <div className="z-10 w-full h-[50px] lg:h-[65px] overflow-hidden bg-[var(--color-primary)] border-y border-black py-4">
       <div className="flex animate-scroll whitespace-nowrap w-max h-full gap-15">
         {[...items, ...items].map((_, idx) => (
           <span key={idx} className="flex items-center h-full gap-25">
